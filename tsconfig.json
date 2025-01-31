@@ -1,4 +1,5 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "target": "ES2022",
     "module": "NodeNext",
@@ -12,6 +13,12 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "types": ["node", "jest"],
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "experimentalDecorators": true,
     "plugins": [
       {
         "transform": "typescript-transform-paths"
