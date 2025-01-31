@@ -5,8 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' --experimental-specifier-resolution=node ./src/index.ts",
-    "start": "cross-env NODE_ENV=production node ./build/src/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon",
+    "start": "cross-env NODE_ENV=production node ./dist/src/index.js",
     "build": "tsc && tsc-alias",
     "lint": "eslint ./src/**/*.ts --fix",
     "format": "prettier --write ./**/*.{ts,json}",
