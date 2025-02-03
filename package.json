@@ -9,7 +9,7 @@
     "start": "cross-env NODE_ENV=production node ./dist/src/index.js",
     "build": "tsc && tsc-alias",
     "kill": "fkill :8000 -f -s",
-    "lint": "eslint ./src/**/*.ts --fix",
+    "lint": "eslint \"./src/**/*.ts\"",
     "format": "prettier --write ./**/*.{ts,json}",
     "test": "node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js --coverage=true -w=1 --forceExit --detectOpenHandles --watchAll=false"
   },
