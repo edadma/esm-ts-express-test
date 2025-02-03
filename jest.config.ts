@@ -3,8 +3,8 @@ export default {
   testEnvironment: 'node',
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '^(\\.{1,2}/.*)\\.js$': '$1',
+    '^@/(.*?)(\\.js)?$': '<rootDir>/src/$1', // allow optional .js extension for alias
+    '^(\\.{1,2}/.*)\\.js$': '$1', // remove .js extension for relative imports
   },
   transform: {
     '^.+\\.tsx?$': [

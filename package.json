@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon",
     "start": "cross-env NODE_ENV=production node ./dist/src/index.js",
-    "build": "tsc && tsc-alias",
+    "build": "rm -rf dist && tsc && tsc-alias",
     "kill": "fkill :8000 -f -s",
     "lint": "eslint \"./src/**/*.ts\" --fix",
     "format": "prettier --write ./**/*.{ts,json}",
