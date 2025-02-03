@@ -26,10 +26,9 @@ export default [
     rules: {
       ...tsPlugin.configs.recommended.rules, // TypeScript recommended rules
       'prettier/prettier': 'error', // Enforce Prettier formatting
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // Ignore unused variables prefixed with _
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }], // Ignore unused variables prefixed with _
       '@typescript-eslint/explicit-module-boundary-types': 'off', // Optional function typing
       curly: ['error', 'all'], // Enforce curly braces for all statements
-      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
   // JavaScript configuration (minimal)

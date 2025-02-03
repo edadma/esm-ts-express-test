@@ -20,12 +20,12 @@ describe('Express Server Tests', () => {
 
   describe('Server Configuration', () => {
     it('should have CORS enabled', () => {
-      const corsMiddleware = server._router.stack.find((layer: any) => layer.name === 'corsMiddleware')
+      const corsMiddleware = server._router.stack.find((layer: { name: string }) => layer.name === 'corsMiddleware')
       expect(corsMiddleware).toBeDefined()
     })
 
     it('should have JSON body parser enabled', () => {
-      const jsonMiddleware = server._router.stack.find((layer: any) => layer.name === 'jsonParser')
+      const jsonMiddleware = server._router.stack.find((layer: { name: string }) => layer.name === 'jsonParser')
       expect(jsonMiddleware).toBeDefined()
     })
   })
