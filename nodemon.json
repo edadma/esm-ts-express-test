@@ -2,5 +2,5 @@
   "watch": ["src"],
   "ext": "ts",
   "ignore": ["src/**/*.test.ts", "src/**/*.spec.ts"],
-  "exec": "eslint \"./src/**/*.ts\" --fix && node --experimental-specifier-resolution=node dev.js"
+  "exec": "eslint \"./src/**/*.ts\" --fix && tsx ./src/index.ts"
 }
