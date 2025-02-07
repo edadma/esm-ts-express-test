@@ -2,8 +2,8 @@
   "compileOnSave": true,
   "compilerOptions": {
     "target": "ES2022",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "baseUrl": ".",
     "rootDir": ".",
@@ -12,6 +12,7 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "preserveSymlinks": true,
     "types": ["node", "jest"],
     "noImplicitAny": true,
     "noUnusedLocals": true,
@@ -26,7 +27,9 @@
       }
     ],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@turf/helpers": ["./node_modules/@turf/helpers/dist/js/index.d.ts"],
+      "@turf/boolean-point-in-polygon": ["./node_modules/@turf/boolean-point-in-polygon/dist/js/index.d.ts"]
     }
   },
   "ts-node": {
